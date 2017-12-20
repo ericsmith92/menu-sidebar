@@ -1,0 +1,14 @@
+{
+  "name": "menu-sidebar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass scss/main.scss css/style.css"
+  },
+  "author": "Eric Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

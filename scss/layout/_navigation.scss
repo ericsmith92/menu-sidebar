@@ -1,0 +1,72 @@
+.navigation{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-grey-dark;
+    width: 0;
+    height: 100vh;
+    float: right;
+    z-index: 10;
+
+    &__button{
+        height: 10rem;
+        width: 10rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        position: fixed;
+        top: 4rem;
+        right: 1rem;
+        cursor: pointer;
+        transition: all .4s;
+    }
+
+    &__icon{
+        width: 5rem;
+        height: 2px;
+        background-color: $color-grey-darkest;
+        z-index: 1;
+        display: block;
+        margin: 0 auto;
+        transform: translateY(3.75rem);
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__list{
+        list-style: none;
+
+        &--item{
+            margin: 2rem;
+            font-family: $font-main;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        &--link{
+            text-decoration: none;
+            color: $color-white;
+
+            &:hover{
+                color: $color-green;
+            }
+        }
+    }
+}
+
+.active.navigation{
+    animation: animateWidth .3s;
+    display: flex;
+    width: 25rem;    
+}
+
+.open.navigation__button{
+    transform: translate(-20rem, -5rem) scale(.8);
+}
+
+.open.navigation__button > .navigation__icon{
+    background-color: $color-red; 
+}
